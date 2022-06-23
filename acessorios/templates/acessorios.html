@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content%}
+
+     <!-- Breadcrumbs-->
+  <section class="breadcrumbs-custom bg-image" style="background-image: url(media/images/breadcrumbs-image1.jpg;">
+    <div class="shell">
+      <h1 class="breadcrumbs-custom__title">Acessórios</h1>
+      <ul class="breadcrumbs-custom__path">
+        <li><a href="bugs">Home</a></li>
+        <li class="active">Acessórios</li>
+      </ul>
+    </div>
+  </section>
+<!-- About Me-->
+  <section class="section section-md bg-white">
+    <div class="shell">
+      <div class="range range-50 range-sm-center-itemrange-md-left range-md-middle range-md-reverse">
+        <div class="cell-sm-6 wow fadeInRightSmall">
+          <div class="thumb-line"><img src="" alt="IMAGEM NÃO FEITA" width="531" height="640"/>
+          </div>
+        </div>
+        <div class="cell-sm-6">
+          <div class="box-width-3">
+            <p class="heading-1 wow fadeInLeftSmall">Acessórios</p>
+            <article class="quote-big wow fadeInLeftSmall" data-wow-delay=".1s">
+              <p class="q">Opções de acessórios para acrescentar a sua encomenda.</p>
+            </article>
+            <div class="divider wow fadeInLeftSmall" data-wow-delay=".2s"></div>
+            <p class="wow fadeInLeftSmall" data-wow-delay=".3s">Os pedidos podem ser feitos por Whatsapp, telefone e e-mail.</p><a class="button button-primary-outline button-ujarak button-size-1 wow fadeInLeftSmall" href="#itens" data-wow-delay=".4s">Ver Mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container-fluid med" id="itens"> 
+      <div class="margin-left">
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="/sub/item1"><img class="img-centered" src="{% static 'media/images/acessorio-3.jpg' %}" width="400" height="327" role="img"/></a>
+            <p class="text-center-item" >Nome do item</p>
+            <p class="text-center"> Descrição do item</p>
+          </div>
+          <div class="col-sm-4">
+            <a href="produto1.html"><img class="img-centered" src="{% static 'media/images/acessorio-3.jpg' %}" width="400" height="327" role="img"/></a>
+            <p class="text-center-item" >Nome do item</p>
+            <p class="text-center"> Descrição do item</p>
+          </div>
+          </div></a><a class="col-sm-4 thumb-janez" href='{% static "media/images/pinturas-02.jpg"%}' data-lightgallery="item"><img class="thumb-light__janez" src='{% static "media/images/acessorio-3.jpg"%}' alt="" width="400" height="327"/>
+        </div>
+          </div></a>
+      </div>
+      </div>
+  </div>
+  <div class="container-fluid med" id="itens"> 
+      <div class="margin-left">
+        <div class="col-sm-4">
+          <a href="produto1.html"><img class="img-centered" src="{% static 'media/images/acessorio-3.jpg' %}" width="400" height="327" role="img"/></a>
+          <p class="text-center-item" >Nome do item</p>
+          <p class="text-center"> Descrição do item</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="produto1.html"><img class="img-centered" src="{% static 'media/images/acessorio-3.jpg' %}" width="400" height="327" role="img"/></a>
+          <p class="text-center-item" >Nome do item</p>
+          <p class="text-center"> Descrição do item</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="produto1.html"><img class="img-centered" src="{% static 'media/images/acessorio-3.jpg' %}" width="400" height="327" role="img"/></a>
+          <p class="text-center-item" >Nome do item</p>
+          <p class="text-center"> Descrição do item</p>
+        </div>
+      </div>
+  </div>
+
+{% endblock content %}
+

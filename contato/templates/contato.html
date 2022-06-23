@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content%}
+{% include "messages.html" %}
+
+<!-- Breadcrumbs-->
+<section class="breadcrumbs-custom bg-image" style="background-image: url(images/breadcrumbs-image2.jpg);">
+  <div class="shell">
+    <h1 class="breadcrumbs-custom__title">Entre em contato</h1>
+    <ul class="breadcrumbs-custom__path">
+      <li><a href="bugs">Home</a></li>
+      <li class="active">Faça seu pedido</li>
+    </ul>
+  </div>
+
+</section>
+<section class="section section-md bg-white">
+  <div class="shell">
+    <div class="range">
+      <div class="cell-xs-12">
+        <h2>Como pedir?</h2>
+        <div class="range range-30 range-center">
+          <div class="cell-xs-10 cell-sm-6 cell-md-4">
+            <article class="box-minimal">
+              <div class="box-minimal__icon fa fa-whatsapp"></div>
+              <h3 class="box-minimal__title">Whatsapp</h3>
+              <div class="box-minimal__divider"></div>
+              <div class="box-minimal__text">Converse conosco no Whatsapp e detalhe seu pedido, envie exemplos, desenhos, modelos, etc...</div>
+            </article>
+          </div>
+          <div class="cell-xs-10 cell-sm-6 cell-md-4">
+            <article class="box-minimal">
+              <div class="box-minimal__icon fa fa-google"></div>
+              <h3 class="box-minimal__title">Email</h3>
+              <div class="box-minimal__divider"></div>
+              <div class="box-minimal__text">Descreva seu pedido dealhadamente, entraremos em contato o mais rapido possivel para confirmar o pedido e confirmar suas preferencias.</div>
+            </article>
+          </div>
+          <div class="cell-xs-10 cell-sm-6 cell-md-4">
+            <article class="box-minimal">
+              <div class="box-minimal__icon fa fa-phone"></div>
+              <h3 class="box-minimal__title">Telefone</h3>
+              <div class="box-minimal__divider"></div>
+              <div class="box-minimal__text">Por telefonemas marcamos horarios de atendimento e consiguimos os melhores detalhes para o seu produto.<br> (48) 99123-1975</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Get in Touch-->
+<section class="section section-md bg-white text-center">
+  <div class="shell">
+    <div class="range range-md-center">
+      <div class="cell-md-11 cell-lg-10">
+        <h2 class="text-bold">Peça agora</h2>
+        <p><span class="box-width-2">Nós entraremos em contato com você para saber mais detalhes do seu pedido. Aguarde.</span></p>
+        <div class="layout-columns">
+          <div class="layout-columns__main">
+            <div class="layout-columns__main-inner">
+              <!-- RD Mailform-->
+                <form class="rd-mailform"  action="" data-form-output="form-output-global" data-form-type="contact" method="post" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="form-wrap">
+                      <label class="form-label rd-input-label"  for="id_nome" >Nome</label>
+                      <input class="form-input" id="id_nome" type="text" name="nome" required id="id_nome" required data-constraints="@Required">
+                    </div>
+                    <div class="form-wrap">
+                      <label class="form-label rd-input-label" for="id_numero" >Seu numero</label>
+                      <input class="form-input" id="id_numero" type="tel" name="numero" required id="id_numero" required data-constraints="@Required @Numeric ">
+                    </div>
+                    <div class="form-wrap">
+                      <label class="form-label rd-input-label" for="id_email" >E-mail</label>
+                      <input class="form-input" id="id_email" type="text" name="email" required id="id_email" required  data-constraints="@Required @Email">
+                    </div>
+                    <div class="form-wrap">
+                        <label class="form-label" for="id_message" >Faça seu pedido aqui</label>
+                        <textarea class="form-input" id="id_message" name="message" required id="id_message" required  data-constraints="@Required"></textarea>
+                    </div>
+                    <div class="form-wrap form-button offset-1">
+                      <input class="button button-block button-primary-outline button-ujarak " type="submit"  value="Enviar">
+                    </div>
+                </form>
+                <!-- Global Mailform Output-->
+            <div class="snackbars" id="form-output-global"></div>
+            </div>
+          </div>
+          <div class="layout-columns__aside">
+            <div class="layout-columns__aside-item">
+              <p class="heading-5">Sociais</p>
+              <div class="divider-modern"></div>
+              <ul class="list-inline-xs">
+                <li><a class="icon icon-md icon-gray-7 fa fa-instagram" href="#"></a></li>
+                <li><a class="icon icon-md icon-gray-7 fa fa-google" href="#"></a></li>
+              </ul>
+            </div>
+            <div class="layout-columns__aside-item">
+              <p class="heading-5">Fone</p>
+              <div class="divider-modern"></div>
+              <div class="unit unit-horizontal unit-spacing-xxs">
+                <div class="unit__left"><span class="icon icon-md icon-primary material-icons-local_phone"></span></div>
+                <div class="unit__body"><a href="tel:#">(48) 99123-1975</a></div>
+              </div>
+            </div>
+            <div class="layout-columns__aside-item">
+              <p class="heading-5">Endereço</p>
+              <div class="divider-modern"></div>
+              <div class="unit unit-horizontal unit-spacing-xxs">
+                <div class="unit__left"><span class="icon icon-md icon-primary material-icons-location_on"></span></div>
+                <div class="unit__body"><a href="#">Rua Vereador Adolfo Bunn, 7 / CEP 88104-010</a></div>
+              </div>
+            </div>
+            <div class="layout-columns__aside-item">
+              <p class="heading-5">Horario de atendimento</p>
+              <div class="divider-modern"></div>
+              <div class="unit unit-horizontal unit-spacing-xxs">
+                <div class="unit__left"><span class="icon icon-md icon-primary mdi mdi-clock"></span></div>
+                <div class="unit__body"><span>Todos os dias das 8:00 as 12:00 / 14:00 as 20:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock content %}
+
+
